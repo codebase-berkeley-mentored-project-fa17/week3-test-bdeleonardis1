@@ -9,7 +9,7 @@ from .models import Post
 class AboutPage(TestCase):
     def setUp(self):
         self.c = Client()
-        self.r = self.c.get("/posts/about")
+        self.r = self.c.get("/posts/about/")
     def testUrlResponse(self):
         response = self.r
         self.assertEqual(response.status_code, 200,
